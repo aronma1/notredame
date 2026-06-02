@@ -3,9 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notre-Dame - Története</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=EB+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tortenete.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="landing.html">Notre Dame</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="landing.html">Kezdőlap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tortenete.html">Története</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Galéria</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Notre-Dame Története</h1>
+    </header>
+
+    <div class="container main-content">
+        <div class="intro-section">
+            <div class="button-group">
+                <button class="btn btn-custom active" data-section="all" data-bs-toggle="modal" data-bs-target="#osszesModal">Összes</button>
+                <button class="btn btn-custom" data-section="kezdetek" data-bs-toggle="modal" data-bs-target="#kezdetekModal">Kezdetek</button>
+                <button class="btn btn-custom" data-section="modern" data-bs-toggle="modal" data-bs-target="#modernModal">Modern</button>
+            </div>
+
+            <p class="intro-text">
+                A Notre-Dame de Reims egyik a legfontosabb építészeti műemlékek a világon. Történelme több mint 800 éves, mely során létrejött a francia gótika egyik legszebb példája. Az épület a francia monarchia szimbóluma volt, és számtalan történelmi eseménynek adott helyet. A 2019-es tűzvész után jelenleg restaurálás alatt áll, de az újjáépítés folyamata jól halad. A templom nemcsak vallási znaczenia miatt fontos, hanem kulturális és történelmi szempontból is meghatározó szerepet játszik Franciaország és az egész európai művészetben.
+            </p>
+        </div>
+
+        <div class="cards-section">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="history-card" data-bs-toggle="modal" data-bs-target="#cardModal" onclick="openCardModal(this)">
+                        <div class="card-image">
+                            <img src="kezdetek.png" alt="A kezdetek">
+                        </div>
+                        <div class="card-body">
+                            <h5>A kezdetek (1163-1345)</h5>
+                            <p>A Notre-Dame de Reims építése 1163-ban kezdődött. Az építkezés több mint két évszázadon át tartott, és a francesa gótika egyik legfontosabb példájává vált.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="history-card" data-bs-toggle="modal" data-bs-target="#cardModal" onclick="openCardModal(this)">
+                        <div class="card-image">
+                            <img src="aranykor.png" alt="Az aranykor">
+                        </div>
+                        <div class="card-body">
+                            <h5>Az aranykor (1345-1600)</h5>
+                            <p>A 14. és 15. századi periódus a Notre-Dame aranykorának tekinthető. Ebben az időszakban építették meg az ikonikus szörnyszobrok és rozetaablakokat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="history-card" data-bs-toggle="modal" data-bs-target="#cardModal" onclick="openCardModal(this)">
+                        <div class="card-image">
+                            <img src="franciaforradalom.png" alt="Francia forradalom">
+                        </div>
+                        <div class="card-body">
+                            <h5>Francia forradalom (1600-1850)</h5>
+                            <p>A francia forradalom alatt a Notre-Dame komoly károkat szenvedett. A 19. században Viollet-le-Duc végzett nagyot ért restaurálást az épületen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="history-card" data-bs-toggle="modal" data-bs-target="#cardModal" onclick="openCardModal(this)">
+                        <div class="card-image">
+                            <img src="modernkor.png" alt="Modern kor">
+                        </div>
+                        <div class="card-body">
+                            <h5>Modern kor (1850-2019)</h5>
+                            <p>A 20. és 21. századi fejlemények során a Notre-Dame továbbra is az egyik legfontosabb építészeti műemlék maradt világszerte.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="history-card" data-bs-toggle="modal" data-bs-target="#cardModal" onclick="openCardModal(this)">
+                        <div class="card-image">
+                            <img src="tuzvesz.png" alt="Tűzvész">
+                        </div>
+                        <div class="card-body">
+                            <h5>A tűzvész (2019)</h5>
+                            <p>Az április 15-i tűz súlyos károkat okozott, de az épület szerkezete megmaradt. Jelenleg egy nagy léptékű restaurálási program folyik.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="history-card" data-bs-toggle="modal" data-bs-target="#cardModal" onclick="openCardModal(this)">
+                        <div class="card-image">
+                            <img src="ujjaepites.png" alt="Újjáépítés">
+                        </div>
+                        <div class="card-body">
+                            <h5>Újjáépítés (2024-jelen)</h5>
+                            <p>Az építkezés 2024-re fejeződik be. A Notre-Dame ismét megnyitják a látogatók előtt az eredeti szépségével felújítva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Modal -->
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content card-modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="expandedCard"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Készítette Csecsur Áron és Magyari Áron</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Modal for Összes -->
+    <div class="modal fade" id="osszesModal" tabindex="-1" aria-labelledby="osszesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="osszesModalLabel">Összes időszak</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A Notre-Dame de Reims története több mint 860 éven át íródik. Az épület egymást követő generációinak munkájának gyümölcse, amely a francia gótika fejlődésének teljes spektrumát mutatja.</p>
+                    <p><strong>1163-ban</strong> kezdődött az építkezés, amely <strong>1345-ben</strong> lezárulat. A középkor során az épület a francia monarchia szellemi és politikai központjává vált.</p>
+                    <p>A francia forradalom (1789) alatt komoly károkat szenvedett, de a 19. században <strong>Eugène Viollet-le-Duc</strong> nagyot ért restaurálást végzett.</p>
+                    <p>A 20. és 21. századi fejlemények során a Notre-Dame az egyik legfontosabb építészeti és kulturális örökség maradt világszerte. A <strong>2019-es tűzvész</strong> után jelenleg restaurálás alatt áll, és <strong>2024-ben</strong> ismét megnyitják a látogatók előtt.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Kezdetek -->
+    <div class="modal fade" id="kezdetekModal" tabindex="-1" aria-labelledby="kezdetekModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kezdetekModalLabel">Kezdetek (1163-1345)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A Notre-Dame de Reims építésének alapkövét 1163-ban helyezték el. Az építkezés egy kolostor helyén kezdődött, és több mint két évszázadon át tartott.</p>
+                    <p><strong>Építészeti stílus:</strong> Az épület az átmenetet mutatja a romanikus és gótikus stílusok között. A 12. század végén még romanikus elemek domináltak, de a 13-14. századdal egyre inkább a francia gótika jellemzői váltak uralkodóvá.</p>
+                    <p><strong>Főbb jellemzők:</strong></p>
+                    <ul>
+                        <li>Magas katedrupasztalok (220 m)</li>
+                        <li>Vályúboltok (ribbed vaults)</li>
+                        <li>Repülő támfalak (flying buttresses)</li>
+                        <li>Gótikus ablakok és rozetták</li>
+                    </ul>
+                    <p>Az építkezés folyamata során számos nehézséggel kellett szembenézni, beleértve a háborúkat, anyagi nehézségeket és természeti katasztrófákat is. Ennek ellenére az építkezés 1345-re befejeződött, és a Notre-Dame de Reims véglegesen a francia gótika egyik legszebb példányává vált.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Modern -->
+    <div class="modal fade" id="modernModal" tabindex="-1" aria-labelledby="modernModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modernModalLabel">Modern kor (1850-2019)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A 19. század közepétől kezdődően a Notre-Dame de Reims jelentős átalakuláson ment keresztül. A francia forradalom után az épület állapota romlani kezdett, mivel elhanyagolták és károsodott a háborúk során.</p>
+                    <p><strong>Eugène Viollet-le-Duc</strong>, a neves francia építész, 1845-ben kezdett hozzá az épület helyreállításához. Restaurálási munkái során számos eredeti elemet visszaállítottak, és újakat is hozzáadtak, amelyek közül néhány vitatottá vált.</p>
+                    <p>A 20. században a Notre-Dame továbbra is fontos szerepet játszott a francia kultúrában és történelemben. Az épületet számos filmben, könyvben és egyéb művészeti alkotásban megörökítették.</p>
+                    <p>A 2019-es tűzvész súlyosan károsította az épületet, különösen a tetőszerkezet és a torony érintett. Jelenleg a Notre-Dame restaurálása folyik, amely várhatóan 2024-re fejeződik be.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCardModal(cardElement) {
+            const cardImage = cardElement.querySelector('.card-image img');
+            const cardTitle = cardElement.querySelector('.card-body h5');
+            const cardText = cardElement.querySelector('.card-body p');
+
+            const expandedCard = document.getElementById('expandedCard');
+            expandedCard.innerHTML = `
+                <div class="expanded-card-content">
+                    <div class="expanded-card-image">
+                        <img src="${cardImage.src}" alt="${cardImage.alt}">
+                    </div>
+                    <div class="expanded-card-body">
+                        <h4>${cardTitle.textContent}</h4>
+                        <p>${cardText.textContent}</p>
+                        <p class="expanded-card-detail">
+                            ${getDetailedContent(cardTitle.textContent)}
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getDetailedContent(title) {
+            const contentMap = {
+                'A kezdetek (1163-1345)': 'A Notre-Dame de Reims építésének alapkövét 1163-ban helyezték el. Az építkezés egy kolostor helyén kezdődött, és több mint két évszázadon át tartott. Az épület az átmenetet mutatja a romanikus és gótikus stílusok között. Főbb jellemzői: magas katedrális, vályúboltok, repülő támfalak, gótikus ablakok és rozetták.',
+                'Az aranykor (1345-1600)': 'A 14. és 15. századi periódus a Notre-Dame aranykorának tekinthető. Ebben az időszakban építették meg az ikonikus szörnyszobrok és rozetaablakokat. Az épület az európai kereszténység szellemi központjává vált, és számos vallási és politikai eseménynek adott helyet.',
+                'Francia forradalom (1600-1850)': 'A francia forradalom alatt a Notre-Dame komoly károkat szenvedett. A vallási zavaroknak és az ideológiai átalakulásnak köszönhetően sok szobor és dísz megsemmisült. A 19. században Eugène Viollet-le-Duc nagyot ért restaurálást végzett az épületen.',
+                'Modern kor (1850-2019)': 'A 20. és 21. századi fejlemények során a Notre-Dame továbbra is az egyik legfontosabb építészeti műemlék maradt világszerte. Milliók látogatták meg és csodálták meg évenként. Az építészeti és kulturális örökség védelme vált a fő prioritássá.',
+                'A tűzvész (2019)': 'Az 2019. április 15-i tűzvész a világot megrázta. A Notre-Dame egy jelentős része megsemmisült, különösen a tetőszerkezet és a torony. De az épület szerkezete megmaradt, és jelenleg egy nagy léptékű restaurálási program folyik.',
+                'Újjáépítés (2024-jelen)': 'Az építkezés 2024-re fejeződik be. A Notre-Dame ismét megnyitják a látogatók előtt az eredeti szépségével felújítva. A restaurálási program célja az épület eredeti szépségének teljes helyreállítása.'
+            };
+            return contentMap[title] || 'További információ hamarosan...';
+        }
+
+        document.querySelectorAll('.btn-custom').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.btn-custom').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
