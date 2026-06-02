@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=EB+Garamond:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    background-color: #d3dad9;
+    color: #37353e;
+}
+
+/* Heading styles - all use UnifrakturMaguntia */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.hero-title,
+.navbar-brand {
+    font-family: 'UnifrakturMaguntia', cursive;
+    letter-spacing: 1px;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #44444e !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #d3dad9 !important;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    gap: 15px;
+}
+
+.nav-btn {
+    background-color: #6b4a42;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #5a3d36;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('notredame.png') center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    position: relative;
+}
+
+.hero-content {
+    margin-left: 60px;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.btn-custom {
+    background-color: #6b4a42;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #5a3d36;
+    color: white;
+}
